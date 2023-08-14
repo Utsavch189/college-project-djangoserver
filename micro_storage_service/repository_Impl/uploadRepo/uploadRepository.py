@@ -1,4 +1,4 @@
-from micro_storage_service.DTO.uploadDto import DbDTO
+from micro_storage_service.dto.upload.dbDto import DbDTO
 from micro_storage_service.repository.upload.main import SaveRepo
 from micro_storage_service.serializer.uploadSerializer import SaveFileSerializer
 

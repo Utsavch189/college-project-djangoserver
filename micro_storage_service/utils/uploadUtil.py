@@ -1,5 +1,5 @@
 import base64
-from micro_storage_service.DTO.uploadDto import WriteFileDTO
+from micro_storage_service.dto.upload.writeobjDto import WriteFileDTO
 
 class Decode:
 
