@@ -158,3 +158,4 @@ desc
 INFO : [15/Aug/2023 10:48:23 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
 ERROR : [15/Aug/2023 10:48:23 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 'MainUploadService' object has no attribute '_repo']
 INFO : [15/Aug/2023 10:49:40 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 10:52:55 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
