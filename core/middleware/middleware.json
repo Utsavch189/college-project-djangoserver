@@ -1,0 +1,5 @@
+{
+    "paths": [
+        { "app": "micro_storage_service", "endpoint": "upload", "protected": 1 }
+    ]
+}

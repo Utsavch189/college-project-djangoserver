@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.authorization.permission.Authorization',
+    'core.middleware.validation.validate.ValidateMiddleWare',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -168,5 +170,15 @@ LOGGING ={
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 APPEND_SLASH=False
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+    "x-userid"
+)
+
 CORS_ORIGIN_ALLOW_ALL=True
 

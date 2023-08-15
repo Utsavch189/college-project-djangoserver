@@ -1,0 +1,160 @@
+INFO : [15/Aug/2023 08:35:27 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:37:02 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:37:40 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 08:37:40 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : [Errno 2] No such file or directory: 'media/aa.mp3']
+INFO : [15/Aug/2023 08:38:08 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:39:18 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 08:39:18 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : [Errno 2] No such file or directory: 'media/aa.mp3']
+INFO : [15/Aug/2023 08:40:43 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:44:18 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:44:34 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 08:44:34 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : "UploadAPI" object has no field "desc"]
+INFO : [15/Aug/2023 08:52:21 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:55:06 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:56:10 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:56:21 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:56:48 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 08:57:45 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 08:57:45 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  field required (type=value_error.missing)
+music_fileobj
+  field required (type=value_error.missing)
+music_cover_filename
+  field required (type=value_error.missing)
+music_cover_fileobj
+  field required (type=value_error.missing)
+artist_name
+  field required (type=value_error.missing)
+desc
+  field required (type=value_error.missing)]
+INFO : [15/Aug/2023 09:01:57 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:01:57 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : micro_storage_service.DTO.upload.main.UploadAPI() argument after ** must be a mapping, not Request]
+INFO : [15/Aug/2023 09:03:08 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:03:08 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : micro_storage_service.DTO.upload.main.UploadAPI() argument after ** must be a mapping, not Request]
+INFO : [15/Aug/2023 09:03:38 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:03:38 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 2 validation errors for UploadAPI
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:04:18 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+INFO : [15/Aug/2023 09:05:50 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:05:50 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 1 validation error for UploadAPI
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:22:33 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:22:33 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:22:47 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:22:47 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:22:58 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:22:58 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:28:14 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:28:14 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:28:30 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:28:30 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:28:48 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:28:48 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:43:52 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:43:52 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 09:44:13 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 09:44:13 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 6 validation errors for UploadAPI
+music_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+music_cover_filename
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+music_cover_fileobj
+  none is not an allowed value (type=type_error.none.not_allowed)
+artist_name
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)
+desc
+  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)]
+INFO : [15/Aug/2023 10:48:23 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]
+ERROR : [15/Aug/2023 10:48:23 package : micro_storage_service.controller.storageController --> position : UploadFileController.post --> exception : 'MainUploadService' object has no attribute '_repo']
+INFO : [15/Aug/2023 10:49:40 package : micro_storage_service.controller.storageController --> position : UploadFileController.post]

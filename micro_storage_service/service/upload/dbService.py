@@ -1,9 +1,7 @@
-from micro_storage_service.dto.upload.dbDto import DbDTO
-from micro_storage_service.repository.upload.main import SaveRepo
+from micro_storage_service.DTO.upload.dbDto import DbDTO
 from micro_storage_service.serializer.uploadSerializer import SaveFileSerializer
 
-class SaveToDBRepo(SaveRepo):
-    
+class DbService:
     def save(self, dbdto: DbDTO):
         try:
             uploaddto=dbdto.uploaddto.__dict__
@@ -17,4 +15,3 @@ class SaveToDBRepo(SaveRepo):
                 return serializer.data
         except Exception as e:
             raise Exception(str(e))
-        
