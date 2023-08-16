@@ -18,5 +18,4 @@ class UploadAPI(BaseModel):
     def arrange_musicFileObj(cls,value):
         if value:
             return value.split(',')[1]
-
-
+    
