@@ -16,8 +16,7 @@ class DbDTO:
         try:
             self.uploaddto=UploadAPI(**self.request.data)
             self.uri=str(int(datetime.timestamp(datetime.now())))+str(self.user_id)
-            self.http_uri=self.request.META['HTTP_HOST']+'/api/v1/storage/'+f'getfile/uri={self.uri}'
-            self.music_file_url=self.request.META['HTTP_HOST']+'/media/nft/'+f'{self.uploaddto.music_filename}'
-            self.music_cover_url=self.request.META['HTTP_HOST']+'/media/nft/'+f'{self.uploaddto.music_cover_filename}'
+            self.music_file_url=self.request.META['HTTP_HOST']+'/media/nft/'+f'{self.uploaddto.music_filename}'+f'{self.user_id}'
+            self.music_cover_url=self.request.META['HTTP_HOST']+'/media/nft/'+f'{self.uploaddto.music_cover_filename}'+f'{self.user_id}'
         except Exception as e:
             raise Exception(str(e))

@@ -10,7 +10,7 @@ class MainUploadService:
     
     def process(self,request:object,id:str)->dict:
         try:
-            success=self._writefile.write(dto=WriteFileDTO(request=request))
+            success=self._writefile.write(dto=WriteFileDTO(request=request),id=id)
             if success: 
                 data=self._db.save(dbdto=DbDTO(request=request,user_id=id))
                 return {"info":"files are uploaded!","data":data}

@@ -7,9 +7,8 @@ class File(models.Model):
     user_id=models.CharField(max_length=150,null=True,blank=True)
     artist_name=models.CharField(max_length=150,null=True,blank=True)
     desc=models.TextField(default="")
-    http_uri=models.CharField(max_length=150,null=True,blank=True)
-    music_file_url=models.CharField(max_length=150,null=True,blank=True)
-    music_cover_url=models.CharField(max_length=150,null=True,blank=True)
+    music_file_uri=models.CharField(max_length=150,null=True,blank=True)
+    music_cover_uri=models.CharField(max_length=150,null=True,blank=True)
 
     def __str__(self) -> str:
         return self.user_id

@@ -14,6 +14,6 @@ class DbService:
             serializer=SaveFileSerializer(data=data)
             if(serializer.is_valid()):
                 serializer.save()
-                return serializer.data
+                return serializer.data['uri']
         except Exception as e:
             raise Exception(str(e))
