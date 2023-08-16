@@ -1,6 +1,4 @@
 from micro_storage_service.DTO.upload.main import UploadAPI
-from django.http import JsonResponse
-from datetime import datetime
 import json
 
 class UploadValidationMiddleWare:
@@ -13,4 +11,4 @@ class UploadValidationMiddleWare:
             if res:
                 return True
         except Exception as e:
-           return JsonResponse({'message': str(e),"timestamp":datetime.timestamp(datetime.now())}, status=400)
+           raise Exception(str(e))

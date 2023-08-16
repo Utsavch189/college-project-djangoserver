@@ -1,6 +1,7 @@
 import json
 from django.conf import settings
 from core.middleware.validation.micro_storage_service_upload.main import UploadValidationMiddleWare
+from core.middleware.validation.micro_storage_service_fetch.main import FetchValidationMiddleWare
 
 class Factory:
 
@@ -20,4 +21,6 @@ class Factory:
         if loc: 
             if loc['endpoint']=='upload' and loc['app']=='micro_storage_service':
                 return UploadValidationMiddleWare()
+            elif loc['endpoint']=='getfile' and loc['app']=='micro_storage_service':
+                return FetchValidationMiddleWare()
         return None

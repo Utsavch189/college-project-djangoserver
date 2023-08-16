@@ -1,5 +1,6 @@
 {
     "paths": [
-        { "app": "micro_storage_service", "endpoint": "upload", "protected": 1 }
+        { "app": "micro_storage_service", "endpoint": "upload", "protected": 1 },
+        { "app": "micro_storage_service", "endpoint": "getfile", "protected": 0 }
     ]
 }
