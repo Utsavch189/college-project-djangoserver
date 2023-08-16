@@ -8,7 +8,7 @@ class MainUploadService:
         self._writefile:WriteFileService=WriteFileService()
         self._db:DbService=DbService()
     
-    def process(self,request,id):
+    def process(self,request:object,id:str)->dict:
         try:
             success=self._writefile.write(dto=WriteFileDTO(request=request))
             if success: 

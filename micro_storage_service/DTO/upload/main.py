@@ -9,4 +9,14 @@ class UploadAPI(BaseModel):
     artist_name:constr(min_length=1,strip_whitespace=True)
     desc:constr(min_length=1,strip_whitespace=True)
 
+    @validator('music_fileobj',allow_reuse=True,always=True)
+    def arrange_musicFileObj(cls,value):
+        if value:
+            return value.split(',')[1]
+    
+    @validator('music_cover_fileobj',allow_reuse=True,always=True)
+    def arrange_musicFileObj(cls,value):
+        if value:
+            return value.split(',')[1]
+
 

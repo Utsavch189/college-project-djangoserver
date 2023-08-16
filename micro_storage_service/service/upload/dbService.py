@@ -7,6 +7,8 @@ class DbService:
             uploaddto=dbdto.uploaddto.__dict__
             del dbdto.__dict__['uploaddto']
             del dbdto.__dict__['request']
+            del uploaddto['music_fileobj']
+            del uploaddto['music_cover_fileobj']
             dto=dbdto.__dict__
             data=uploaddto|dto
             serializer=SaveFileSerializer(data=data)

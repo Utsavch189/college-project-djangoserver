@@ -6,13 +6,14 @@ class WriteFileService:
     def write(self,dto:WriteFileDTO)->bool:
         try:
             decoded_dict:dict=Decode.decoding(music_obj=dto.uploaddto.music_fileobj,musicCover_obj=dto.uploaddto.music_cover_fileobj)
-            with open(f'media/{dto.uploaddto.music_filename}','wb') as f:
+            with open(f'media/nft/{dto.uploaddto.music_filename}','wb') as f:
                 f.write(decoded_dict['decoded_music_obj'])
                 f.close()
 
-            with open(f'media/{dto.uploaddto.music_cover_filename}','wb') as f:
-                f.write(decoded_dict['decoded_musicCover_obj'])
-                f.close()
+            
+            with open(f'media/nft/{dto.uploaddto.music_cover_filename}','wb') as s:
+                s.write(decoded_dict['decoded_musicCover_obj'])
+                s.close()
             return True
         except Exception as e:
             raise Exception(str(e))
