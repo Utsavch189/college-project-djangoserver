@@ -1,0 +1,4 @@
+INFO : [17/Aug/2023 19:41:36 package : micro_storage_service.controller.controller --> position : UploadFileController.post]
+INFO : [17/Aug/2023 19:42:16 package : micro_storage_service.controller.controller --> position : UploadFileController.post]
+ERROR : [17/Aug/2023 19:42:16 package : micro_storage_service.controller.controller --> position : UploadFileController.post --> exception : already a file is exists with same name!]
+INFO : [17/Aug/2023 19:47:21 package : micro_storage_service.controller.controller --> position : UploadFileController.post]

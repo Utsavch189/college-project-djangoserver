@@ -1,7 +1,7 @@
 from micro_storage_service.DTO.upload.dbDto import DbDTO
 from micro_storage_service.serializer.uploadSerializer import SaveFileSerializer
 
-class DbService:
+class UploadDbService:
     def save(self, dbdto: DbDTO):
         try:
             uploaddto=dbdto.uploaddto.__dict__

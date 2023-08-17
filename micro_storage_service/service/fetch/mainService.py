@@ -1,13 +1,13 @@
-from micro_storage_service.service.fetch.dbService import FetchDbService
+from micro_storage_service.service.db.mainDbService import DbService
 
 class MainFetchService:
 
     def __init__(self) -> None:
-        self._fetchdb:FetchDbService=FetchDbService()
+        self._db:DbService=DbService()
         
     def fetch(self,uri:str)->dict:
         try:
-            data=self._fetchdb.get(uri=uri)
+            data=self._db.get(uri=uri)
             return {"data":data}
         except Exception  as e:
             print(e)

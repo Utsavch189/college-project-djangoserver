@@ -1,5 +1,5 @@
 from micro_storage_service.service.upload.writeFileService import WriteFileService
-from micro_storage_service.service.upload.dbService import DbService
+from micro_storage_service.service.db.mainDbService import DbService
 from micro_storage_service.DTO.upload.writeobjDto import WriteFileDTO
 from micro_storage_service.DTO.upload.dbDto import DbDTO
 
