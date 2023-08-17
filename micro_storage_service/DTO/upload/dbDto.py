@@ -19,6 +19,6 @@ class DbDTO:
             self.music_file_uri=f'{self.user_id}'+f'{self.uploaddto.music_filename}'
             self.music_cover_uri=f'{self.user_id}'+f'{self.uploaddto.music_cover_filename}'
             if File.objects.filter(music_file_uri=self.music_file_uri,music_cover_uri=self.music_cover_uri).exists():
-                raise Exception("already a file is exists with same name!")
+                raise Exception("already files are exist with same name for this id!")
         except Exception as e:
             raise Exception(str(e))

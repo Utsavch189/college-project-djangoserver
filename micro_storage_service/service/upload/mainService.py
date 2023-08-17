@@ -13,6 +13,6 @@ class MainUploadService:
             data=self._db.save(dbdto=DbDTO(request=request,user_id=id))
             success=self._writefile.write(dto=WriteFileDTO(request=request),id=id)
             if data and success:      
-                return {"info":"files are uploaded!","uri":data}
+                return {"info":f"files are uploaded for {data}","uri":data}
         except Exception  as e:
             raise Exception(str(e))
