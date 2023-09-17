@@ -1,0 +1,3 @@
+INFO : [15/Sep/2023 20:19:57 package : micro_storage_service.controller.controller --> position : UploadFileController.post]
+ERROR : [15/Sep/2023 20:19:58 package : micro_storage_service.controller.controller --> position : UploadFileController.post --> exception : 'music_file_uri']
+INFO : [15/Sep/2023 20:22:39 package : micro_storage_service.controller.controller --> position : UploadFileController.post]
