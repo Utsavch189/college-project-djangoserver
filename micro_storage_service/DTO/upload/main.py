@@ -15,7 +15,7 @@ class UploadAPI(BaseModel):
             return value.split(',')[1]
     
     @validator('music_cover_fileobj',allow_reuse=True,always=True)
-    def arrange_musicFileObj(cls,value):
+    def arrange_musicFileCoverObj(cls,value):
         if value:
             return value.split(',')[1]
     
