@@ -3,7 +3,7 @@ from django.conf import settings
 from django.http import JsonResponse
 from datetime import datetime
 
-middleware_json=os.path.join(settings.BASE_DIR,'middlewares.json')
+middleware_json=os.path.join(settings.BASE_DIR,'middleware.json')
 
 class Authorization:
     def __init__(self, get_response):
