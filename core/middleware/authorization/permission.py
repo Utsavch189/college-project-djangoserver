@@ -1,12 +1,14 @@
-import json
+import json,os
 from django.conf import settings
 from django.http import JsonResponse
 from datetime import datetime
 
+middleware_json=os.path.join(settings.BASE_DIR,'middleware.json')
+
 class Authorization:
     def __init__(self, get_response):
         self.get_response = get_response
-        with open(f"{settings.BASE_DIR}\\core\\middleware\\middleware.json", "r") as read_file:
+        with open(middleware_json, "r") as read_file:
             self._register_paths:dict=json.load(read_file)
     
     def get_exact_loc(self,request:object)->dict:
