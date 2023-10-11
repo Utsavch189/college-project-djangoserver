@@ -7,7 +7,7 @@ class MainFetchService:
         
     def fetch(self,uri:str)->dict:
         try:
-            data=self._db.get(uri=uri)
-            return {"data":data}
+            data,status_code=self._db.get(uri=uri)
+            return {"data":data},status_code
         except Exception  as e:
             print(e)

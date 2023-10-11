@@ -26,5 +26,5 @@ class FetchFileController(APIView):
 
     @log(logger=logger)
     def get(self,request,uri):
-        message=self._fetchService.fetch(uri=uri)
-        return Response(message,status=status.HTTP_200_OK)
+        message,status_code=self._fetchService.fetch(uri=uri)
+        return Response(message,status=status_code)
