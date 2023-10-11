@@ -1,5 +1,7 @@
 from micro_storage_service.DTO.upload.dbDto import DbDTO
 from micro_storage_service.serializer.uploadSerializer import SaveFileSerializer
+from rest_framework import status
+
 
 class UploadDbService:
     def save(self, dbdto: DbDTO):
@@ -17,6 +19,6 @@ class UploadDbService:
             serializer=SaveFileSerializer(data=data)
             if(serializer.is_valid()):
                 serializer.save()
-                return serializer.data['uri']
+                return serializer.data['uri'],status.HTTP_201_CREATED
         except Exception as e:
             raise Exception(str(e))

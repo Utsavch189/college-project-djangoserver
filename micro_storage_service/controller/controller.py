@@ -1,7 +1,6 @@
 from typing import Any
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status
 from micro_storage_service.service.upload.mainService import MainUploadService
 from micro_storage_service.service.fetch.mainService import MainFetchService
 from core.logger.logging import log
@@ -16,8 +15,8 @@ class UploadFileController(APIView):
 
     @log(logger=logger)
     def post(self,request,id):
-        message=self._uploadService.process(request=request,id=id)
-        return Response(message,status=status.HTTP_200_OK)
+        message,status_code=self._uploadService.process(request=request,id=id)
+        return Response(message,status=status_code)
 
 class FetchFileController(APIView):
 

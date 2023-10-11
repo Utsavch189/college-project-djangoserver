@@ -10,9 +10,9 @@ class MainUploadService:
     
     def process(self,request:object,id:str)->dict:
         try:
-            data=self._db.save(dbdto=DbDTO(request=request,user_id=id))
+            data,status_code=self._db.save(dbdto=DbDTO(request=request,user_id=id))
             success=self._writefile.write(dto=WriteFileDTO(request=request),id=id)
             if data and success:      
-                return {"info":f"files are uploaded for {data}","uri":data}
+                return {"info":f"files are uploaded for {data}","uri":data},status_code
         except Exception  as e:
             raise Exception(str(e))
