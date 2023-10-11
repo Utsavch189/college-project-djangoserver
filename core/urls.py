@@ -18,10 +18,11 @@ from django.views.static import serve
 from django.conf.urls.static import static
 from django.urls import path, include, re_path
 from django.conf import settings
-from django.views.decorators.csrf import csrf_exempt
+from core.ping import Ping
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/',Ping.as_view()),
     path('api/v1/storage/',include('micro_storage_service.urls')),
     path('api/v1/music/',include('micro_music_service.urls')),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
