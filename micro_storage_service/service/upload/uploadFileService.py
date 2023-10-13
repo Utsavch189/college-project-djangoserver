@@ -1,27 +1,12 @@
 from micro_storage_service.utils.upload.decode import Decode
-from micro_storage_service.DTO.upload.writeobjDto import WriteFileDTO
+from micro_storage_service.DTO.upload.uploads import UploadFileDTO
 from micro_storage_service.utils.upload.cdn import CDN
 
 class UploadFileService:
 
-    def __init__(self,dto:WriteFileDTO,id:str) -> None:
+    def __init__(self,dto:UploadFileDTO,id:str) -> None:
         self._dto=dto
         self._id=id
-
-    def _writeToLocal(self)->bool:
-        try:
-            decoded_dict:dict=Decode.decoding(music_obj=self._dto.uploaddto.music_fileobj,musicCover_obj=self._dto.uploaddto.music_cover_fileobj)
-            with open(f'media/nft/{self._id}'+f'{self._dto.uploaddto.music_filename}','wb') as f:
-                f.write(decoded_dict['decoded_music_obj'])
-                f.close()
-
-            
-            with open(f'media/nft/{self._id}'+f'{self._dto.uploaddto.music_cover_filename}','wb') as s:
-                s.write(decoded_dict['decoded_musicCover_obj'])
-                s.close()
-            return True
-        except Exception as e:
-            raise Exception(str(e))
     
     def _uploadToCdn(self)->dict:
         try:

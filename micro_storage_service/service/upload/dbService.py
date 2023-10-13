@@ -6,9 +6,6 @@ from rest_framework import status
 class UploadDbService:
     def save(self, dbdto: DbDTO):
         try:
-            music_file_uri=dbdto.music_file_uri
-            music_cover_uri=dbdto.music_cover_uri
-
             uploaddto=dbdto.uploaddto.__dict__
             del dbdto.__dict__['uploaddto']
             del dbdto.__dict__['request']
