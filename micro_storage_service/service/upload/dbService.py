@@ -1,21 +1,20 @@
 from micro_storage_service.DTO.upload.dbDto import DbDTO
-from micro_storage_service.serializer.uploadSerializer import SaveFileSerializer
 from rest_framework import status
-
+from micro_storage_service.models import File
 
 class UploadDbService:
     def save(self, dbdto: DbDTO):
         try:
-            uploaddto=dbdto.uploaddto.__dict__
-            del dbdto.__dict__['uploaddto']
-            del dbdto.__dict__['request']
-            del uploaddto['music_fileobj']
-            del uploaddto['music_cover_fileobj']
-            dto=dbdto.__dict__
-            data=uploaddto|dto
-            serializer=SaveFileSerializer(data=data)
-            if(serializer.is_valid()):
-                serializer.save()
-                return serializer.data['uri'],status.HTTP_201_CREATED
+                File.objects.create(
+                    uri=dbdto.uri,
+                    music_filename=dbdto.mainDto.music_filename,
+                    music_cover_filename=dbdto.mainDto.music_cover_filename,
+                    user_id=dbdto.user_id,
+                    artist_name=dbdto.mainDto.artist_name,
+                    desc=dbdto.mainDto.desc,
+                    music_file_uri=dbdto.music_file_uri,
+                    music_cover_uri=dbdto.music_cover_uri
+                )
+                return dbdto.uri,status.HTTP_201_CREATED
         except Exception as e:
             raise Exception(str(e))

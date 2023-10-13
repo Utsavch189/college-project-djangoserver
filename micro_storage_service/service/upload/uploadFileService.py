@@ -1,21 +1,20 @@
 from micro_storage_service.utils.upload.decode import Decode
-from micro_storage_service.DTO.upload.uploads import UploadFileDTO
+from micro_storage_service.DTO.upload.main import UploadAPI
 from micro_storage_service.utils.upload.cdn import CDN
 
 class UploadFileService:
 
-    def __init__(self,dto:UploadFileDTO,id:str) -> None:
+    def __init__(self,dto:UploadAPI) -> None:
         self._dto=dto
-        self._id=id
     
     def _uploadToCdn(self)->dict:
         try:
             #https://res.cloudinary.com/dcf6uk047/video/upload/v1697178895/nft_assets/nftmy.mp3
             
-            decoded_dict:dict=Decode.decoding(music_obj=self._dto.uploaddto.music_fileobj,musicCover_obj=self._dto.uploaddto.music_cover_fileobj)
+            decoded_dict:dict=Decode.decoding(music_obj=self._dto.music_fileobj,musicCover_obj=self._dto.music_cover_fileobj)
             
-            music_file_name=self._dto.uploaddto.music_filename.split(".")[0]
-            music_cover_filename=self._dto.uploaddto.music_cover_filename.split(".")[0]
+            music_file_name=self._dto.music_filename.split(".")[0]
+            music_cover_filename=self._dto.music_cover_filename.split(".")[0]
 
             cdn=CDN()
 

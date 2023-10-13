@@ -5,17 +5,18 @@ from micro_storage_service.service.upload.mainService import MainUploadService
 from micro_storage_service.service.fetch.mainService import MainFetchService
 from core.logger.logging import log
 import logging
+from micro_storage_service.DTO.upload.main import UploadAPI
 
 logger=logging.getLogger('mylogger')
 
 class UploadFileController(APIView):
 
     def __init__(self, **kwargs: Any) -> None:
-        self._uploadService:MainUploadService=MainUploadService()
+        self._uploadService:MainUploadService=MainUploadService
 
     @log(logger=logger)
     def post(self,request,id):
-        message,status_code=self._uploadService.process(request=request,id=id)
+        message,status_code=self._uploadService().process(dto=UploadAPI(**request.data),id=id)
         return Response(message,status=status_code)
 
 class FetchFileController(APIView):
