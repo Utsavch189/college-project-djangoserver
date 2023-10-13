@@ -16,8 +16,6 @@ class DbDTO:
         try:
             self.uploaddto=UploadAPI(**self.request.data)
             self.uri=str(int(datetime.timestamp(datetime.now())))+str(self.user_id)
-            self.music_file_uri=f'{self.user_id}'+f'{self.uploaddto.music_filename}'
-            self.music_cover_uri=f'{self.user_id}'+f'{self.uploaddto.music_cover_filename}'
             if File.objects.filter(music_file_uri=self.music_file_uri,music_cover_uri=self.music_cover_uri).exists():
                 raise Exception("already files are exist with same name for this id!")
         except Exception as e:
