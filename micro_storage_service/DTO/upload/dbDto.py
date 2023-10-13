@@ -14,7 +14,7 @@ class DbDTO:
     def __post_init__(self):
         try:
             self.uri=str(int(datetime.timestamp(datetime.now())))+str(self.user_id)
-            if File.objects.filter(music_file_uri=self.music_file_uri,music_cover_uri=self.music_cover_uri).exists():
+            if File.objects.filter(music_file_uri=self.music_file_uri,music_cover_uri=self.music_cover_uri,uri=self.uri).exists():
                 raise Exception("already files are exist with same name for this id!")
         except Exception as e:
             raise Exception(str(e))
